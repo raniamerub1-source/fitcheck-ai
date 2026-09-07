@@ -1,0 +1,6 @@
+{
+  "name": "FitCheck AI",
+  "description": "AI-powered personal outfit stylist providing instant vision-based fashion critiques, fit scores, and personalized styling recommendations.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
