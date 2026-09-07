@@ -94,20 +94,26 @@ const MIME_TYPES: Record<string, string> = {
 async function startServer() {
   const isProduction = process.env.NODE_ENV === 'production';
   let viteMiddleware: any = null;
+  let vitePromise: Promise<void> | null = null;
 
   if (!isProduction) {
-    const vite = await createViteServer({
+    vitePromise = createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
-    });
-    viteMiddleware = vite.middlewares;
+    })
+      .then((vite) => {
+        viteMiddleware = vite.middlewares;
+      })
+      .catch((err) => {
+        console.error('Failed to initialize Vite development middleware:', err);
+      });
   }
 
   const server = http.createServer(async (req, res) => {
     try {
       const urlPath = req.url?.split('?')[0] || '/';
 
-      // Route all API requests through the Cloudflare Worker endpoint
+      // Route all API requests through the Cloudflare Worker endpoint immediately
       if (urlPath.startsWith('/api/')) {
         const webRequest = await nodeToWebRequest(req);
         const webResponse = await worker.fetch(webRequest, {
@@ -118,9 +124,14 @@ async function startServer() {
       }
 
       // Development: Hand off to Vite middlewares for HMR / asset serving
-      if (!isProduction && viteMiddleware) {
-        viteMiddleware(req, res);
-        return;
+      if (!isProduction) {
+        if (!viteMiddleware && vitePromise) {
+          await vitePromise;
+        }
+        if (viteMiddleware) {
+          viteMiddleware(req, res);
+          return;
+        }
       }
 
       // Production: Serve static assets from dist/
