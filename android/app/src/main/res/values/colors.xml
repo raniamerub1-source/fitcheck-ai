@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand colors matching FitCheck AI -->
+    <color name="colorPrimary">#191919</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#F59E0B</color>
+    <color name="navigationColor">#191919</color>
+    <color name="navigationDividerColor">#262626</color>
+    <color name="backgroundColor">#FBFBF9</color>
+    <color name="ic_launcher_background">#191919</color>
+</resources>

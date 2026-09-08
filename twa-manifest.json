@@ -1,0 +1,38 @@
+{
+  "packageId": "com.fitcheck.ai",
+  "host": "fitcheck-ai.rrmm787787.workers.dev",
+  "name": "FitCheck AI",
+  "launcherName": "FitCheck AI",
+  "themeColor": "#191919",
+  "navigationColor": "#191919",
+  "backgroundColor": "#FBFBF9",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://fitcheck-ai.rrmm787787.workers.dev/pwa-512x512.png",
+  "maskableIconUrl": "https://fitcheck-ai.rrmm787787.workers.dev/pwa-maskable-512x512.png",
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "splashScreenFadeOutDuration": 300,
+  "enableSiteSettingsShortcut": true,
+  "display": "standalone",
+  "orientation": "portrait",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://fitcheck-ai.rrmm787787.workers.dev/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  }
+}

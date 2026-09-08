@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitCheck AI</string>
+    <string name="launcher_name">FitCheck AI</string>
+    <string name="host_name">fitcheck-ai.rrmm787787.workers.dev</string>
+    <string name="default_url">https://fitcheck-ai.rrmm787787.workers.dev/</string>
+    <!-- Statement linking the app to the web origin for full-screen verified TWA -->
+    <string name="asset_statements" translatable="false">
+        [{\n          \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n          \"target\": {\n            \"namespace\": \"web\",\n            \"site\": \"https://fitcheck-ai.rrmm787787.workers.dev\"\n          }\n        }]
+    </string>
+</resources>

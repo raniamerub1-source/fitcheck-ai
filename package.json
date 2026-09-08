@@ -13,6 +13,8 @@
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "start": "node dist/server.cjs",
     "preview": "vite preview",
+    "generate:icons": "tsx scripts/generate-icons.ts",
+    "generate:android-icons": "tsx scripts/generate-android-icons.ts",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "deploy": "npx wrangler deploy",

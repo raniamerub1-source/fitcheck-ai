@@ -10,3 +10,7 @@ bun.lockb
 .bun/
 .env*
 !.env.example
+dev-dist/
+*.keystore
+*.jks
+

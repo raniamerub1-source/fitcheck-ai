@@ -224,9 +224,17 @@ export default function App() {
           <p className="font-editorial text-sm font-semibold text-neutral-800">
             FitCheck AI &mdash; Haute Vision Stylist
           </p>
-          <p className="text-[11px] text-neutral-500">
-            Objective fashion critique calibrated exclusively to visible garments, occasion, and aesthetic vibe.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-neutral-500">
+            <span>Objective fashion critique calibrated exclusively to visible garments.</span>
+            <a
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 hover:text-neutral-900 underline underline-offset-2 transition-colors font-medium"
+            >
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </footer>
       {/* Offline Connectivity Status Toast */}
