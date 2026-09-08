@@ -9,6 +9,7 @@ import { LandingScreen } from './components/LandingScreen';
 import { UploadScreen } from './components/UploadScreen';
 import { LoadingScreen } from './components/LoadingScreen';
 import { ResultsScreen } from './components/ResultsScreen';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { Occasion, StyleVibe, OutfitAnalysis, AnalyzeRequest, AnalyzeResponse } from './types';
 import { SampleOutfit } from './data/sampleOutfits';
 import { AlertCircle, ArrowLeft, RotateCcw } from 'lucide-react';
@@ -228,6 +229,8 @@ export default function App() {
           </p>
         </div>
       </footer>
+      {/* Offline Connectivity Status Toast */}
+      <OfflineIndicator />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Shirt, RefreshCw } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface NavbarProps {
   currentScreen: 'landing' | 'upload' | 'loading' | 'results';
@@ -41,6 +42,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentScreen, onNavigateHome, o
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
             <span>Vision Intelligence</span>
           </div>
+
+          <PWAInstallButton />
 
           {currentScreen === 'results' && (
             <button
