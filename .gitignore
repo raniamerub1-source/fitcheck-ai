@@ -5,5 +5,8 @@ coverage/
 .DS_Store
 *.log
 .wrangler/
+bun.lock
+bun.lockb
+.bun/
 .env*
 !.env.example
